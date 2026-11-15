@@ -1,0 +1,83 @@
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.env
+!*.env.example
+*.pem
+*.key
+*.ppk
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
+
+# Virtual environments and local dependencies
+.venv*/
+venv/
+env/
+ENV/
+.dependencies/
+
+# Application data, SQLite and backups
+instance/
+*.sqlite
+*.sqlite-*
+*.sqlite3
+*.sqlite3-*
+*.db
+*.db-*
+backups/
+backup/
+*.bak
+*.backup
+*.dump
+
+# Logs and Python/test caches
+logs/
+*.log
+*.log.*
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.pytest*/
+.qa*/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.ruff_cache/
+.mypy_cache/
+
+# Transfer packages and temporary checks
+transfer_artifacts/
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.tmp
+*.temp
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Additional credentials, backups and caches
+.ssh/
+.envrc
+*.secret
+*.jks
+*.keystore
+*.bkp
+*.old
+*.7z
+*.rar
+*.sql.gz
+.cache/
+.hypothesis/
+.ipynb_checkpoints/
+node_modules/

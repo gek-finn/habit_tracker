@@ -1,0 +1,26 @@
+[Unit]
+Description=habit_tracker WSGI service
+After=network.target
+StartLimitIntervalSec=60
+StartLimitBurst=3
+
+[Service]
+Type=simple
+User=habit_tracker
+Group=habit_tracker
+WorkingDirectory=/opt/habit_tracker/current
+EnvironmentFile=/etc/habit_tracker/habit_tracker.env
+Environment=PYTHONDONTWRITEBYTECODE=1
+ExecStart=/opt/habit_tracker/current/.venv/bin/gunicorn --workers 1 --threads 1 --worker-class sync --bind 127.0.0.1:8017 --forwarded-allow-ips=127.0.0.1 --timeout 30 --error-logfile - --log-level info wsgi:app
+Restart=on-failure
+RestartSec=10
+TimeoutStopSec=40
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/habit_tracker
+
+[Install]
+WantedBy=multi-user.target

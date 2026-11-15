@@ -1,0 +1,4 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>{{ title }} · Ритм</title><link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"></head>
+<body><header class="shell"><a class="brand" href="{{ url_for('index') }}"><span class="mark">✓</span> Ритм <small>трекер привычек</small></a><nav aria-label="Основная навигация">{% if current_user.is_authenticated %}<a href="{{ url_for('auth.tracker') }}">Мой трекер</a>{% else %}<a href="{{ url_for('auth.login') }}">Войти</a>{% endif %}</nav></header>
+<main class="shell">{% for message in get_flashed_messages() %}<div class="notice" role="status">{{ message }}</div>{% endfor %}{% block content %}{% endblock %}</main><footer class="shell">Маленькие шаги. Ваш собственный ритм.</footer></body></html>

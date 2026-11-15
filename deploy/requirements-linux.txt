@@ -1,0 +1,4 @@
+# Linux publication only; installation/execution still requires verification.
+-r ../requirements.txt
+gunicorn==27.0.1
+packaging==26.3
