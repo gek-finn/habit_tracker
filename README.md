@@ -31,14 +31,17 @@ Python · Flask · SQLite · Flask-Login · Flask-WTF · JavaScript
 
 ## Интерфейс
 
-![Интерфейс приложения на демонстрационных данных](docs/screenshots/desktop.png)
+### Календарь привычек
 
-<details>
-<summary>Мобильный экран и другие разделы</summary>
+![Календарь привычек](docs/screenshots/desktop.png)
 
-![mobile](docs/screenshots/mobile.png)
+### Редактирование привычки
 
-</details>
+![Редактирование привычки](docs/screenshots/detail-1.jpg)
+
+### Мобильный экран
+
+![Мобильный экран](docs/screenshots/mobile.png)
 
 ## Запуск
 
